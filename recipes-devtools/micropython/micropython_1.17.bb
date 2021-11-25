@@ -1,5 +1,8 @@
 # -*- sh -*-
-DESCRIPTION = "MicroPython is a lean and fast implementation of the Python 3 programming language"
+DESCRIPTION = "\
+    MicroPython is a lean and fast implementation of the Python 3 programming \
+    language \
+"
 HOMEPAGE = "https://micropython.org"
 SECTION = "devel/python"
 
@@ -10,8 +13,6 @@ inherit autotools-brokensep
 
 INC_PR = "r1"
 PR = "${INC_PR}.0"
-
-PV="1.17"
 
 SRC_URI = " \
 	gitsm://github.com/micropython/micropython.git;name=src;tag=v${PV} \
@@ -58,4 +59,3 @@ RRECOMMENDS_${PN} = "micropython-lib"
 INSANE_SKIP_${PN} = "already-stripped"
 
 BBCLASSEXTEND = "native"
-
